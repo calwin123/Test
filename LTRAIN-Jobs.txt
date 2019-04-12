@@ -1,0 +1,664 @@
+
+/* ----------------- EOIPTR151_PCD0300_LTRAIN ----------------- */ 
+
+insert_job: EOIPTR151_PCD0300_LTRAIN   job_type: c 
+command: D\:\eOMISReportingService\JobMonitor\eOMISJobMonitor.exe "OMSR402~78~OMSI100~IPTR151|IPTI100|05|RB|I ~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~I"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we,mx,me
+date_conditions: 1
+days_of_week: all
+start_times: "03:00"
+description: "Run Daily Movement Recap Job"
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 1
+
+
+
+/* ----------------- EOMHSR134_PCD0400_LTRAIN ----------------- */ 
+
+insert_job: EOMHSR134_PCD0400_LTRAIN   job_type: c 
+command: D\:\eOMISReportingService\JobMonitor\eOMISJobMonitor.exe "OMSR402~78~OMSI100~MHSR134|MHSI100|15|RC|I ~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~I"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we,mx,me
+date_conditions: 1
+days_of_week: all
+start_times: "04:00"
+description: "Run DDP Inmate Program List Job"
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 1
+
+
+/* ----------------- EOMHSR135_PCD0200_LTRAIN ----------------- */ 
+
+insert_job: EOMHSR135_PCD0200_LTRAIN   job_type: c 
+command: D\:\eOMISReportingService\JobMonitor\eOMISJobMonitor.exe "OMSR402~78~OMSI100~MHSR135|MHSI100|16|RD|I ~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~I"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we,mx,me
+date_conditions: 1
+days_of_week: all
+start_times: "02:00"
+description: "Run DDP Test Results Statistics Job"
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 1
+
+
+/* ----------------- EOMHSR136_PCD0400_LTRAIN ----------------- */ 
+
+insert_job: EOMHSR136_PCD0400_LTRAIN   job_type: c 
+command: D\:\eOMISReportingService\JobMonitor\eOMISJobMonitor.exe "OMSR402~78~OMSI100~MHSR136|MHSI100|17|RE|I ~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~I"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we,mx,me
+date_conditions: 1
+days_of_week: all
+start_times: "04:00"
+description: "Run DDP Test Type Statistics Job"
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 1
+
+
+/* ----------------- EOOTRI10045_0015_LTRAIN ----------------- */ 
+
+insert_job: EOOTRI10045_0015_LTRAIN   job_type: c 
+command: D\:\eOMISReportingService\JobMonitor\eOMISJobMonitor.exe "CALLURL~45~OTRI100~%REPORTINTERFACESERVLET%/com.marquis.eomis.ReportInterfaceServlet?task=MaintainTickerTapeServlet&option=tickerTapeJob1&ioName=TTJ1|60~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~I"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we,mx,me
+date_conditions: 1
+days_of_week: all
+start_mins: 0,15,30,45
+description: "Run Maintain Tickcer Tape 1 Job"
+term_run_time: 3
+std_out_file: D\:\Batch\Logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\Logs\%AUTO_JOB_NAME%.err
+max_run_alarm: 1
+alarm_if_fail: 1
+
+
+/* ----------------- EOOTRI10047_PCD0030_LTRAIN ----------------- */ 
+
+insert_job: EOOTRI10047_PCD0030_LTRAIN   job_type: c 
+command: D\:\eOMISReportingService\JobMonitor\eOMISJobMonitor.exe "CALLURL~47~OTRI100~%REPORTINTERFACESERVLET%/com.marquis.eomis.ReportInterfaceServlet?task=MaintainTickerTapeServlet&option=tickerTapeJob3&ioName=TTJ3|60~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~I"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we,mx,me
+date_conditions: 1
+days_of_week: all
+start_times: "00:30"
+description: "Run Maintain Tickcer Tape 3 Job"
+term_run_time: 3
+std_out_file: D\:\Batch\Logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\Logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 1
+
+
+/* ----------------- EOOTRI10046_PCD0800_LTRAIN ----------------- */ 
+
+insert_job: EOOTRI10046_PCD0800_LTRAIN   job_type: c 
+command: D\:\eOMISReportingService\JobMonitor\eOMISJobMonitor.exe "CALLURL~46~OTRI100~%REPORTINTERFACESERVLET%/com.marquis.eomis.ReportInterfaceServlet?task=MaintainTickerTapeServlet&option=tickerTapeJob2&ioName=TTJ2|60~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~I"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we,mx,me
+date_conditions: 1
+days_of_week: all
+start_times: "08:00,16:00,00:01"
+description: "Run Maintain Tickcer Tape 2 Job"
+term_run_time: 3
+std_out_file: D\:\Batch\Logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\Logs\%AUTO_JOB_NAME%.err
+max_run_alarm: 1
+alarm_if_fail: 1
+
+
+
+/* ----------------- EOOTRI10048_PCD0005_LTRAIN ----------------- */ 
+
+insert_job: EOOTRI10048_PCD0005_LTRAIN   job_type: c 
+command: D\:\eOMISReportingService\JobMonitor\eOMISJobMonitor.exe "CALLURL~48~OTRI100~%REPORTINTERFACESERVLET%/com.marquis.eomis.ReportInterfaceServlet?task=MaintainTickerTapeServlet&option=tickerTapeJob4&ioName=TTJ4|10~m_SOMS.Service.desk@cdcr.ca.gov~~1~PDF~I"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we,mx,me
+date_conditions: 1
+days_of_week: all
+start_mins: 00,05,10,15,20,25,30,35,40,45,50,55
+run_window: "08:00-16:00"
+description: "Run Maintain Ticker Tape 4 Job"
+term_run_time: 3
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+max_run_alarm: 1
+alarm_if_fail: 1
+
+
+
+/* ----------------- EOCHSR162_PCD0200_LTRAIN ----------------- */ 
+
+insert_job: EOCHSR162_PCD0200_LTRAIN   job_type: c 
+command: D\:\eOMISReportingService\JobMonitor\eOMISJobMonitor.exe "OMSR402~78~OMSI100~CHSR162|CHSI100|20|FH|L~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~I"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we,mx,me
+date_conditions: 1
+days_of_week: su,mo,tu,we,th,fr,sa
+start_times: "02:00"
+description: "H/S Scheduling Exceptions"
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 1
+group: Window1
+application: HCS
+
+
+/* ----------------- EOCIT5406_LTRAIN ----------------- */ 
+
+insert_job: EOCIT5406_LTRAIN   job_type: c 
+command: D\:\Batch\Jobs\LTRAINuction\EOCIT5406\Scripts\EOCIT5406.bat
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we,mx,me
+date_conditions: 1
+days_of_week: all
+start_times: "21:00"
+description: "Run CIT_5406 Update Script v3"
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 1
+
+
+/* ----------------- EOEOIR861_LTRAIN ----------------- */ 
+
+insert_job: EOEOIR861_LTRAIN   job_type: c 
+command: D\:\eOMISReportingService\JobMonitor\eOMISJobMonitor.exe "EOIR861~UP~EOII100~~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~XLS~L"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we
+date_conditions: 1
+days_of_week: su,mo,tu,we,th,fr,sa
+start_times: "01:00"
+description: "Run AD UPN Import Job"
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 0
+group: EOMIS
+
+
+/* ----------------- EOIPTR150_PCD0300_LTRAIN ----------------- */ 
+
+insert_job: EOIPTR150_PCD0300_LTRAIN   job_type: c 
+command: D\:\eOMISReportingService\JobMonitor\eOMISJobMonitor.exe "OMSR402~78~OMSI100~IPTR150|IPTI100|74|RA|I ~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~I"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we,mx,me
+date_conditions: 1
+days_of_week: all
+start_times: "03:00"
+description: "Run Internal Transfers Job"
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 1
+group: Window1
+
+
+/* ----------------- EOIPTR160_PCD0200_LTRAIN ----------------- */ 
+
+insert_job: EOIPTR160_PCD0200_LTRAIN   job_type: c 
+command: D\:\eOMISReportingService\JobMonitor\eOMISJobMonitor.exe "OMSR402~78~OMSI100~IPTR160|IPTI100|33|FT|L|ALLFACILITIES|%INSTID%^%FACILITYID%^^^^^^^^^~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~I"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we,mx,me
+date_conditions: 1
+days_of_week: su,mo,tu,we,th,fr,sa
+start_times: "02:00"
+description: "EOIPTR160_PCD0200_LTRAIN"
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 1
+group: EOMIS
+
+
+/* ----------------- EOIPTR500_PCD0030_LTRAIN ----------------- */ 
+
+insert_job: EOIPTR500_PCD0030_LTRAIN   job_type: c 
+command: D\:\eOMISReportingService\JobMonitor\eOMISJobMonitor.exe "IPTR500~18~IPTI100~|~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~L"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we,mx,me
+condition: s(EOIPTR700_PCD0005_LTRAIN)
+description: "EOIPTR500_PCD0030_LTRAIN"
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 1
+
+
+/* ----------------- EOIPTR700_PCD0005_LTRAIN ----------------- */ 
+
+insert_job: EOIPTR700_PCD0005_LTRAIN   job_type: c 
+command: D\:\eOMISReportingService\JobMonitor\eOMISJobMonitor.exe "IPTR700~24~IPTI100~|~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~L"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we,mx,me
+date_conditions: 1
+days_of_week: su,mo,tu,we,th,fr,sa
+start_times: "00:05"
+description: "EOIPTR700_PCD0005_LTRAIN"
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 1
+
+
+/* ----------------- EOISSJ099_PCD0100_LTRAIN ----------------- */ 
+
+insert_job: EOISSJ099_PCD0100_LTRAIN   job_type: c 
+command: D\:\eOMISReportingService\JobMonitor\eOMISJobMonitor.exe "ISSR099~24~ISSI100~E|%ndbmTaskCheckConfidentialMemos%^%ndbmTaskCheckForOverdueMHTransfers%^%ndbmTaskReportOverdueExtraordinaryOccurrences%|%CURRENTDATE%|~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~N"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we,mx,me
+date_conditions: 1
+days_of_week: su,mo,tu,we,th,fr,sa
+start_times: "01:00"
+description: "EOISSJ099_PCD0100_LTRAIN"
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 1
+
+
+/* ----------------- EOOMSR097_PCD2330_LTRAIN ----------------- */ 
+
+insert_job: EOOMSR097_PCD2330_LTRAIN   job_type: c 
+command: D\:\eOMISReportingService\JobMonitor\eOMISJobMonitor.exe "OMSR097~73~OMSI100~~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~L"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we,mx,me
+date_conditions: 1
+days_of_week: su,mo,tu,we,th,fr,sa
+start_times: "23:00"
+description: "EOOMSR097_PCD2330_LTRAIN"
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 1
+
+
+
+/* ----------------- EOOTCR120_LTRAIN ----------------- */ 
+
+insert_job: EOOTCR120_LTRAIN   job_type: c 
+command: D\:\eomisreportingservice\jobmonitor\eOMISJobMonitor.exe "OMSR402~78~OMSI100~OTCR120|OTCI100|18|FL|I|CASERECORDOFFICES|%INSTID%^%FACILITYID%^~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~I"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we
+date_conditions: 1
+days_of_week: all
+start_times: "2:30"
+description: "Run Legal Status Summary (LSS) Documents for Inmates Job"
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 1
+group: Window1
+
+
+/* ----------------- EOOTCR121_LTRAIN ----------------- */ 
+
+insert_job: EOOTCR121_LTRAIN   job_type: c 
+command: D\:\eomisreportingservice\jobmonitor\eOMISJobMonitor.exe "OMSR402~78~OMSI100~OTCR121|OTCI100|19|PL|I|PAROLEREGOFFICES|%INSTID%^~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~I"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we
+date_conditions: 1
+days_of_week: all
+start_times: "02:45"
+description: "Run Legal Status Summary (LSS) Documents for Parolees Job"
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 1
+group: Window1
+
+
+/* ----------------- EOOTCR160_1_LTRAIN ----------------- */ 
+
+insert_job: EOOTCR160_1_LTRAIN   job_type: c 
+command: D\:\eomisreportingservice\jobmonitor\eOMISJobMonitor.exe "OMSR402~78~OMSI100~OTCR160|OTCI100|25|CL|L|CASERECORDOFFICES|%INSTID%^%FACILITYID%^^%CURRENTDATE%^LPU~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~I"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we
+date_conditions: 1
+days_of_week: mo,tu,we,th,fr
+start_times: "3:00"
+description: "Run Case Records Action Due Job LPU Filter"
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 1
+
+
+/* ----------------- EOOTCR160_2_LTRAIN ----------------- */ 
+
+insert_job: EOOTCR160_2_LTRAIN   job_type: c 
+command: D\:\eomisreportingservice\jobmonitor\eOMISJobMonitor.exe "OMSR402~78~OMSI100~OTCR160|OTCI100|28|GD|L|CASERECORDOFFICES|%INSTID%^%FACILITYID%^^%CURRENTDATE%^reldt~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~I"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we
+date_conditions: 1
+days_of_week: mo,tu,we,th,fr
+start_times: "3:15"
+description: "Run Case Records Action Due #2 Job Release Date Filter"
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 1
+
+
+/* ----------------- EOOTCR160_3_LTRAIN ----------------- */ 
+
+insert_job: EOOTCR160_3_LTRAIN   job_type: c 
+command: D\:\eomisreportingservice\jobmonitor\eOMISJobMonitor.exe "OMSR402~78~OMSI100~OTCR160|OTCI100|24|FD|L|CASERECORDOFFICES|%INSTID%^%FACILITYID%^^%CURRENTDATE%^lglmn~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~I"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we
+date_conditions: 1
+days_of_week: mo,tu,we,th,fr
+start_times: "3:30"
+description: "Run Case Records Action Due #3 Job Legal Mandate Filter"
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 1
+
+
+/* ----------------- EOOTCR160_4_LTRAIN ----------------- */ 
+
+insert_job: EOOTCR160_4_LTRAIN   job_type: c 
+command: D\:\eomisreportingservice\jobmonitor\eOMISJobMonitor.exe "OMSR402~78~OMSI100~OTCR160|OTCI100|09|GA|L|CASERECORDOFFICES|%INSTID%^%FACILITYID%^^%CURRENTDATE%^audit~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~I"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we
+date_conditions: 1
+days_of_week: mo,tu,we,th,fr
+start_times: "3:45"
+description: "Run Case Records Action Due #4 Job All Audits Filter"
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 1
+
+
+/* ----------------- EOOTCR160_5_LTRAIN ----------------- */ 
+
+insert_job: EOOTCR160_5_LTRAIN   job_type: c 
+command: D\:\eomisreportingservice\jobmonitor\eOMISJobMonitor.exe "OMSR402~78~OMSI100~OTCR160|OTCI100|26|FY|L|CASERECORDOFFICES|%INSTID%^%FACILITYID%^^%CURRENTDATE%^ovaud~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~I"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we
+date_conditions: 1
+days_of_week: mo,tu,we,th,fr
+start_times: "4:00"
+description: "Run Case Records Action Due #5 Job Overdue Audits Filter"
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 1
+
+
+/* ----------------- EOOTCR160_6_LTRAIN ----------------- */ 
+
+insert_job: EOOTCR160_6_LTRAIN   job_type: c 
+command: D\:\eomisreportingservice\jobmonitor\eOMISJobMonitor.exe "OMSR402~78~OMSI100~OTCR160|OTCI100|16|GB|L|CASERECORDOFFICES|%INSTID%^%FACILITYID%^^%CURRENTDATE%^demo~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~I"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we
+date_conditions: 1
+days_of_week: mo,tu,we,th,fr
+start_times: "4:15"
+description: "Run Case Records Action Due #6 Job  Demographics Filter"
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 1
+
+
+/* ----------------- EOOTCR160_7_LTRAIN ----------------- */ 
+
+insert_job: EOOTCR160_7_LTRAIN   job_type: c 
+command: D\:\eomisreportingservice\jobmonitor\eOMISJobMonitor.exe "OMSR402~78~OMSI100~OTCR160|OTCI100|29|GC|L|CASERECORDOFFICES|%INSTID%^%FACILITYID%^^%CURRENTDATE%^RPS~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~I"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we
+date_conditions: 1
+days_of_week: mo,tu,we,th,fr
+start_times: "4:30"
+description: "Run Case Records Action Due #7 Job  RPS Filter"
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 1
+
+
+/* ----------------- EOOTCR922_LTRAIN ----------------- */ 
+
+insert_job: EOOTCR922_LTRAIN   job_type: c 
+command: D\:\eomisreportingservice\jobmonitor\eOMISJobMonitor.exe "OMSR402~78~OMSI100~OTCR922|OTCI100|17|FV|I|CASERECORDOFFICES|%INSTID%^%FACILITYID%^^^N~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~I"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we,mx,me
+date_conditions: 1
+days_of_week: all
+start_times: "03:00"
+description: "Run Release Date Change Notice Job"
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 0
+group: Window1
+
+
+/* ----------------- EOOTRR340_LTRAIN ----------------- */ 
+
+insert_job: EOOTRR340_LTRAIN   job_type: c 
+command: D\:\eomisreportingservice\jobmonitor\eOMISJobMonitor.exe "OMSR402~78~OMSI100~OTRR340|OTRI100|03|FB|I|CASERECORDOFFICES|%INSTID%^%FACILITYID%^%CURRENTDATE%^Y~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~I"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we
+date_conditions: 1
+days_of_week: su,mo,tu,we,th,fr,sa
+start_times: "2:30"
+description: "Run Notification Requests Generated Job"
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 1
+
+
+/* ----------------- EOOTRR941_LTRAIN ----------------- */ 
+
+insert_job: EOOTRR941_LTRAIN   job_type: c 
+command: D\:\eomisreportingservice\jobmonitor\eOMISJobMonitor.exe "OMSR402~78~OMSI100~OTRR941|OTRI100|04|FB|I|CASERECORDOFFICES|%INSTID%^%FACILITYID%^^^Y~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~I"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we
+date_conditions: 1
+days_of_week: su,mo,tu,we,th,fr,sa
+start_times: "3:00"
+condition: s(EOOTRR340_LTRAIN)
+description: "Run Release Date Change Notice Job"
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 1
+
+
+/* ----------------- EOOTRR944_LTRAIN ----------------- */ 
+
+insert_job: EOOTRR944_LTRAIN   job_type: c 
+command: D\:\eomisreportingservice\jobmonitor\eOMISJobMonitor.exe "OMSR402~78~OMSI100~OTRR944|OTRI100|48|FB|I|CASERECORDOFFICES|%INSTID%^%FACILITYID%^%CURRENTDATE%^Y~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~I"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we
+date_conditions: 1
+days_of_week: su,mo,tu,we,th,fr,sa
+start_times: "4:00"
+description: "Run Release Date Change Notice Job"
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 1
+
+
+/* ----------------- EOOTRR170_LTRAIN ----------------- */ 
+
+insert_job: EOOTRR170_LTRAIN   job_type: c 
+command: D\:\eomisreportingservice\jobmonitor\eOMISJobMonitor.exe "OTRR170~52~OTRI100~%QUARTERBEGIN%|%QUARTEREND%~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~L"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we
+date_conditions: 1
+run_calendar: QTRLY1st
+start_times: "03:00"
+description: "Run New Victims by Relationship Job"
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 0
+
+
+/* ----------------- EOOTRR171_LTRAIN ----------------- */ 
+
+insert_job: EOOTRR171_LTRAIN   job_type: c 
+command: D\:\eomisreportingservice\jobmonitor\eOMISJobMonitor.exe "OTRR171~53~OTRI100~%QUARTERBEGIN%|%QUARTEREND%~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~L"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we
+date_conditions: 1
+run_calendar: QTRLY2nd
+start_times: "03:00"
+description: "Run Requests for Conditions of Parole Job"
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 0
+
+
+
+/* ----------------- EOOTRR173_LTRAIN ----------------- */ 
+
+insert_job: EOOTRR173_LTRAIN   job_type: c 
+command: D\:\eomisreportingservice\jobmonitor\eOMISJobMonitor.exe "OTRR173~55~OTRI100~%QUARTERBEGIN%|%QUARTEREND%~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~L"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we
+date_conditions: 1
+run_calendar: QTRLY3rd
+start_times: "03:00"
+description: "Run Form's 1707 Received by County Job"
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 0
+
+
+/* ----------------- EOOTRR174_LTRAIN ----------------- */ 
+
+insert_job: EOOTRR174_LTRAIN   job_type: c 
+command: D\:\eomisreportingservice\jobmonitor\eOMISJobMonitor.exe "OTRR174~56~OTRI100~%QUARTERBEGIN%|%QUARTEREND%~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~L"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we
+date_conditions: 1
+run_calendar: QTRLY4th
+start_times: "03:00"
+description: "Run Form's 1707 Received by County - Violent Crimes Job"
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 0
+
+
+
+
+/* ----------------- EOOTRR176_LTRAIN ----------------- */ 
+
+insert_job: EOOTRR176_LTRAIN   job_type: c 
+command: D\:\eomisreportingservice\jobmonitor\eOMISJobMonitor.exe "OTRR176~58~OTRI100~%QUARTERBEGIN%|%QUARTEREND%~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~L"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we
+date_conditions: 1
+run_calendar: QTRLY1st
+start_times: "04:30"
+description: "Run PAL-VSRIS Crosscheck Job"
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 0
+
+
+/* ----------------- EOOTRR180_LTRAIN ----------------- */ 
+
+insert_job: EOOTRR180_LTRAIN   job_type: c 
+command: D\:\eomisreportingservice\jobmonitor\eOMISJobMonitor.exe "OTRR180~60~OTRI100~%QUARTERBEGIN%|%QUARTEREND%~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~L"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we
+date_conditions: 1
+run_calendar: QTRLY1st
+start_times: "04:00"
+description: "Run Victim Special Needs Job"
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 0
+
+
+/* ----------------- EOOTRR181_LTRAIN ----------------- */ 
+
+insert_job: EOOTRR181_LTRAIN   job_type: c 
+command: D\:\eomisreportingservice\jobmonitor\eOMISJobMonitor.exe "OTRR181~61~OTRI100~%QUARTERBEGIN%|%QUARTEREND%~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~L"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we
+date_conditions: 1
+run_calendar: QTRLY2nd
+start_times: "04:00"
+description: "Run Victim Special Issues Job"
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 0
+
+
+/* ----------------- EOOTRR184_LTRAIN ----------------- */ 
+
+insert_job: EOOTRR184_LTRAIN_somapab05   job_type: c 
+command: D\:\eomisreportingservice\jobmonitor\eOMISJobMonitor.exe "OTRR184~62~OTRI100~%QUARTERBEGIN%|%QUARTEREND%~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~L"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we
+date_conditions: 1
+run_calendar: QTRLY3rd
+start_times: "04:00"
+description: "Run VSRIS Commitments by County Job"
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 0
+
+
+/* ----------------- EOOTRR185_LTRAIN ----------------- */ 
+
+insert_job: EOOTRR185_LTRAIN   job_type: c 
+command: D\:\eomisreportingservice\jobmonitor\eOMISJobMonitor.exe "OTRR185~63~OTRI100~%QUARTERBEGIN%|%QUARTEREND%~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~L"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we
+date_conditions: 1
+run_calendar: QTRLY4th
+start_times: "04:00"
+description: "Run VSRIS Commitments - Violent Crimes Job"
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 0
+
+
+/* ----------------- EOOTRR186_LTRAIN ----------------- */ 
+
+insert_job: EOOTRR186_LTRAIN   job_type: c 
+command: D\:\eomisreportingservice\jobmonitor\eOMISJobMonitor.exe "OTRR186~64~OTRI100~%QUARTERBEGIN%|%QUARTEREND%~m_SOMS.Service.desk@cdcr.ca.gov~EOMIS~~1~PDF~L"
+machine: usmagwkccr450
+owner: sa_autosys_admin@JPS
+permission: gx,ge,wx,we
+date_conditions: 1
+run_calendar: QTRLY5th
+start_times: "04:00"
+description: "Run VSRIS Deceased Lifers Job"
+std_out_file: D\:\Batch\logs\%AUTO_JOB_NAME%.out
+std_err_file: D\:\Batch\logs\%AUTO_JOB_NAME%.err
+alarm_if_fail: 0
+group: EOMIS
+
+

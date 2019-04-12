@@ -1,0 +1,36 @@
+
+     Run this command to test BSU tool to make sure it works
+./bsu.sh -prod_dir=/oracle/middleware/wls/wlserver_10.3 -patch_download_dir=/oracle/middleware/wls/utils/bsu/cache_dir -verbose -status=applied -view 
+
+weblogic@usrnscwmw100/oracle/middleware/wls/utils/bsu> 
+
+./bsu.sh -prod_dir=/oracle/middleware/wls/wlserver_10.3 -patch_download_dir=/oracle/middleware/wls/utils/bsu/cache_dir -verbose -status=applied -view
+
+
+bsu.cmd -prod_dir=D:\Oracle\Middleware\ -patch_download_dir=D:\Oracle\Middleware\utils\bsu -verbose -status=applied -view
+
+
+ 
+Prep steps:
+ 
+1.       Create a backup copy of the current config.xml
+2.       Create new Work Managers. This should be pretty safe because new configuration takes affect after the server restart. 
+3.       Get a copy of production .ear and update the weblogic.xml file
+4.       Move the updated .ear with a unique name (CalwinApplication-cweprd.ear-NEW) to the 101 server
+5.       Copy the new resourcebundle.jar with unique name (resourcebundle.jar-new)  to all production servers  /oracle/middleware/wls/oracle_common/modules/oracle.javatools_11.1.1 
+6.       Copy required files from \\Uscascw017\Enterprise Wide\EDS App Svcs\tmp\Govi\Patch-14377549  to all production servers (/oracle/middleware/wls/utils/bsu/cache_dir)
+7.       Rename existing patch-catalog.xml to patch-catalog.xml-old and rename  patch-catalog_18279.xml to patch-catalog.xml
+8.       Run this command to test BSU tool to make sure it works
+./bsu.sh -prod_dir=/oracle/middleware/wls/wlserver_10.3 -patch_download_dir=/oracle/middleware/wls/utils/bsu/cache_dir -verbose -status=applied -view 
+
+bsu.cmd  -status=applied  -prod_dir=D:\Oracle\Middleware\wlserver_10.3 -view -verbose > D:\Oracle\Middleware\utils\bsu/installed_patches_01_20_2019.log
+ 
+bsu.cmd -prod_dir=D:\Oracle\Middleware\wlserver_10.3 -patch_download_dir=D:\Oracle\Middleware\utils\bsu -verbose -status=applied -view 
+
+
+bsu.cmd -prod_dir=D:\Oracle\Middleware\wlserver_10.3 -status=applied -verbose -view
+
+
+bsu.cmd -prod_dir=D:\Oracle\Middleware\wlserver_10.3 -status=applied -view
+
+bsu.cmd -prod_dir=D:\Oracle\Middleware\wlserver_10.3 -status=applied -verbose -view
